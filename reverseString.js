@@ -1,24 +1,13 @@
-//
-class MyString {
-    constructor() {
-        this.length = 0;
-        this.data = {};
+// reverse the string
+function reverse(items) {
+    let outArray = [];
+    for (let i = items.length - 1; i >= 0; i--) {
+        outArray.push(items[i]);
     }
-
-    reverse(items) {
-        const newArray = [...items];
-        let outArray = [];
-        for (let i = newArray.length; i > 0; i--) {
-            outArray.push(newArray[i -1]);
-        }
-        this.data = outArray.join(" ");
-        return this.data;
-    }
+    return outArray.join("");
 }
-const newStr = new MyString();
-
-newStr.reverse("KARTIK");
-console.log("🚀 ~ newStr:", newStr)
-
-
-
+function reverse2(str) {
+    return str.split('').reverse().join('');
+}
+const reverse3 = str => [...str].reverse().join('');
+console.log(reverse("This is me"));
